@@ -30,7 +30,6 @@
         [button addTarget:self action:@selector(showShareActivity:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button];
         
-        
     }
 }
 

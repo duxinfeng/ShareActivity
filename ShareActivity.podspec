@@ -1,9 +1,11 @@
+
 Pod::Spec.new do |s|
+
   s.name         = "ShareActivity"
-  s.version      = "0.0.1"
-  s.summary      = "一个弹框"
+  s.version      = "0.0.2"
+  s.summary      = "一个底部弹框"
   s.description  = <<-DESC
-                    分享一个弹框
+                    一个底部弹框
                    DESC
   s.homepage     = "https://github.com/duxinfeng/ShareActivity"
   

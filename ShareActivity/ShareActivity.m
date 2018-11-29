@@ -53,13 +53,13 @@
     NSArray *imagearr = [NSArray arrayWithObjects:@"sns_icon_5",@"sns_icon_4",@"sns_icon_1",@"sns_icon_2",@"sns_icon_3",@"sns_icon_7",@"sns_icon_8",nil];
     NSArray *titlearray = [NSArray arrayWithObjects:@"朋友圈",@"微信",@"新浪微博",@"手机QQ",@"QQ空间",@"复制文字",@"保存图片",nil];
         
-    float leftX = 20;
-    float upY = 25;
-    float wideR = 55;
-    float highR = 55;
-    float spaceX = 20;
-    float spaceY = 74.0/2;
-    int row = 4;
+    CGFloat leftX = 20;
+    CGFloat upY = 25;
+    CGFloat wideR = 55;
+    CGFloat highR = 55;
+    CGFloat spaceX = 20;
+    CGFloat spaceY = 74.0/2;
+    NSInteger row = 4;
     
     NSInteger screen_W = [UIScreen mainScreen].bounds.size.width;
     
@@ -70,9 +70,7 @@
         wideR = highR = (screen_W-2*leftX-4*spaceX)/5;
     }else{
         wideR = highR = (screen_W-2*leftX-3*spaceX)/4;
-
     }
-    
 
     // line
     {
@@ -141,10 +139,12 @@
         [button addSubview:line];
         
         self.activityHeight = NOW_HEIGHT(button);
+        if (@available(iOS 11.0, *)) {
+            self.activityHeight += [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom;
+        }
     }
     
 }
-
 
 -(void)more_sub_Click:(UIButton *)sender
 {
@@ -160,6 +160,7 @@
         self.alpha = 1.0;
         [self.backGroundView setFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height-self.activityHeight, [UIScreen mainScreen].bounds.size.width, self.activityHeight)];
     } completion:^(BOOL finished) {
+    
     }];
 }
 

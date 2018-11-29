@@ -1,0 +1,16 @@
+PODS:
+  - ShareActivity (0.0.1)
+
+DEPENDENCIES:
+  - ShareActivity (from `../`)
+
+EXTERNAL SOURCES:
+  ShareActivity:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ShareActivity: 19e541806b9493fd58da178ce1f54a9bec9e3272
+
+PODFILE CHECKSUM: b4229970e158046d30b0cd7dfe5098657e028193
+
+COCOAPODS: 1.6.0.beta.2
